@@ -31,11 +31,13 @@ class Sysdig:
             raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), scap)
 
     def _sysdig_output(self, raw_evt):
-        evt_info = raw_evt.decode(UTF).split()
+        evt_info = raw_evt.split()
+        print(evt_info)
         timestamp = str(evt_info[1][:-3])
-        syscall = evt_info[6]
+        syscall = evt_info[5]
         args = list(evt_info[7:])
         evt = [timestamp, syscall, args]
+        # print(f"evt: {evt}")
         return evt
 
     def process_scap(self, scap):

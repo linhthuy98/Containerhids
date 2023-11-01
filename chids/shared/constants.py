@@ -55,3 +55,10 @@ TRAINING_INITIALIZER = 'CHIDS is generating the required training elements for y
 TRAINING_HEADERS = '------------ Training Summary ----------'
 
 STYLE = "green bold"
+
+TRAINING = "Training"
+TESTING = "Test"
+VALIDATION = "Validation"
+
+NORMAL = "Normal"
+EXPLOIT = "Normal and Attack"
